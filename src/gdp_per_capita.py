@@ -1,10 +1,10 @@
 class GdpData:
-    def __init__(self, by_country, by_year):
+    def __init__(self, by_country: dict[str, dict[int, float]], by_year: dict[int, dict[str, float]]):
         self.by_country = by_country
         self.by_year = by_year
 
 class GdpCell:
-    def __init__(self, country_key, country, year, value):
+    def __init__(self, country_key: str, country: str, year: int, value: float):
         self.country_key = country_key
         self.country = country
         self.year = year
@@ -26,7 +26,7 @@ def read():
             raise Exception("xml does not contain the expected structure")
         records = data.findall('record')
         for record in records:
-            country_key = None
+            country_code = None
             country = None
             year = None
             value = None
@@ -37,28 +37,28 @@ def read():
                 value = field.text.strip() if field.text else None
                 match name:
                     case 'Country or Area':
-                        country_key = key
+                        country_code = key
                         country = value
                     case 'Year':
                         year = int(value) if value else None
                     case 'Value':
                         value = float(value) if value else None
 
-            if None in [country, year, value]:
+            if None in [country, country_code, year, value]:
                 # print(f"Skipping incomplete record: {country}-{year}-{value}")
                 continue
 
             # add to the collectors
-            obj = GdpCell(country_key,country,year,value)
+            obj = GdpCell(country_code,country,year,value)
             gdp_list.append(obj)
 
             for_year = by_year.get(year, {})
-            for_year[country] = value
+            for_year[country_code] = value
             by_year[year] = for_year
 
-            for_country = by_country.get(country, {})
+            for_country = by_country.get(country_code, {})
             for_country[year] = value
-            by_country[country] = for_country
+            by_country[country_code] = for_country
 
     return GdpData(by_country, by_year)
 

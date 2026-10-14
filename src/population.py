@@ -14,7 +14,7 @@ def read():
         reader = csv.DictReader(file)
 
         for row in reader:
-            country = row["Reference area"]
+            country = row["REF_AREA"]
             year = int(row["TIME_PERIOD"])
             value = int(float(row["OBS_VALUE"]))
 
