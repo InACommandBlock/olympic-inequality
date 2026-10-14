@@ -16,7 +16,7 @@ def read():
         for row in reader:
             country = row["Reference area"]
             year = int(row["TIME_PERIOD"])
-            value = int(row["OBS_VALUE"].replace('.', ''))
+            value = int(float(row["OBS_VALUE"]))
 
             # ignore specific subsets
             if row["Sex"] != "Total":
