@@ -11,31 +11,27 @@ class medal:
     self.country : str = country 
     
     
-  def number (self, number):
+  def data (self, number , type , year, country): 
     
     filename: str = "olympic-inequality/data/olympic_medalists.csv"   
     with open(filename) as csv_file:
-      reader = csv.reader(csv_file, delimiter=';')
-      for zeile in reader:
-        print(zeile['medal'])
-    return self.number
-  
-  def type (self, type):
       
-    filename: str = "olympic-inequality/data/olympic_medalists.csv"   
-    with open(filename) as csv_file: 
       reader = csv.reader(csv_file, delimiter=';')
-      for zeile in reader:
-        print(zeile['medal'])     
-      return self.type
+      number : int = 0
+      
+      for row  in reader:
+        
+        number : int = row+1
+        type : str = row['medal']
+        year : int = row['year']
+        country : str = row['country']
+        
+
+      
   
-  def type (self, year):  
-    filename: str = "olympic-inequality/data/olympic_medalists.csv"   
-    with open(filename) as csv_file:
-          
-      reader = csv.reader(csv_file, delimiter=';')
-      for zeile in reader:
-        print(zeile['medal'])
+         
+
+     
     return self.year
   def type (self, country):  
     filename: str = "olympic-inequality/data/olympic_medalists.csv"   
@@ -45,3 +41,5 @@ class medal:
       for zeile in reader:
         print(zeile['medal'])
     return self.country
+
+
