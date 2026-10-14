@@ -6,6 +6,7 @@
 * Use [emojis](https://gitmoji.dev) for commits.
 * Code is to be written in Python.
 * Use comments!
+* Data is stored compressed; please extract the files directly below `./data/`
 
 
 ## The Sources
