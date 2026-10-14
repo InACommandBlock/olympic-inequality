@@ -41,7 +41,7 @@ def wealth_to_medals(medal_data: MedalData, relgdp_data: GdpData, year=2022):
         num_medals = len(medals_in_year)
         print(f"{country} : GDP/p = {gdp}$ ; ∑medals = {num_medals}")
         points.append((gdp, num_medals))
-    scatter(f"GDP/p to Medals {year}", points, x_axis="GDP/p", y_axis="# Medals", filename=f"../results/gdp_to_medals_{year}.png", do_avg=True)
+    scatter(f"GDP/p (per person) to Medals {year}", points, x_axis="GDP/p", y_axis="# Medals", filename=f"../results/gdp_to_medals_{year}.png", do_avg=True)
 
 def population_to_medals(medal_data: MedalData, population_data: PopulationData, year=2022):
     print(f"\n\nPopulation to Medals for {year}")
