@@ -30,7 +30,7 @@ def scatter(title: str, points: list[tuple[int, int]], x_axis: str, y_axis: str,
     plt.show()
 
 def wealth_to_medals(medal_data: MedalData, relgdp_data: GdpData, year=2022):
-    print(f"\n\nGDP/p to Medals for {year}")
+    print(f"\n\nGDP/p (per person) to Medals for {year}")
     points = []
     for country in relgdp_data.by_year[year]:
         gdp = relgdp_data.by_year[year][country]

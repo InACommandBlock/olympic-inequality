@@ -5,11 +5,20 @@
 
 If the CSV/XML files are still zip-compressed, please extract them directly below `data/`.
 While the parsers use built-in modules, we use `matplotlib` and `numpy` for the generation of results. You can enter the virtual environment and run the code:
+**On Windows**
 ```ps
-cd /src
+cd src/
 ./Scripts/Activate
 py results.py
 ```
+**On Linux**
+
+1. make sure you opend the src/ dir
+   before executing results.py 
+2. install numpy via pip install numpy 
+    or follow the instruction for your specific distro 
+3. python3 resource.py
+
 
 ## The Guidelines
 
@@ -37,6 +46,6 @@ py results.py
 
 ## The Plan
 
-1. Check the data.
+1. 
 2. Parse the data with Python.
 3. Pretty graphs.
