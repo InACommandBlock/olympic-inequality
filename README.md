@@ -1,6 +1,16 @@
 # Olympic Medalists -- A Contest Between Humans or Countries?
 
 
+## Test & Run
+
+If the CSV/XML files are still zip-compressed, please extract them directly below `data/`.
+While the parsers use built-in modules, we use `matplotlib` and `numpy` for the generation of results. You can enter the virtual environment and run the code:
+```ps
+cd /src
+./Scripts/Activate
+py results.py
+```
+
 ## The Guidelines
 
 * Use [emojis](https://gitmoji.dev) for commits.
@@ -8,12 +18,6 @@
 * Use comments!
 * Data is stored compressed; please extract the files directly below `./data/`
 
-While the parsers use built-in modules, we use `matplotlib` and `numpy` for the generation of results. You can enter the virtual environment and run the code:
-```ps
-cd /src
-./Scripts/Activate
-py results.py
-```
 
 ## The Sources
 
