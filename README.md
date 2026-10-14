@@ -13,7 +13,7 @@
 
 | Data              | Source        | Format     | Years    | Notes                          |
 | ----------------- | ------------- | ---------- | -------- | ------------------------------ |
-| Olympic Medals    | Kaggle.com    |            | 1896 -   |                                |
+| Olympic Medals    | Kaggle.com    |            | 1896 -   | Alice                          |
 | GDP per Capita    | World Bank    |            | 1960 -   |                                |
 | Population        | OECD          |            | 1961 -   |                                |
 
