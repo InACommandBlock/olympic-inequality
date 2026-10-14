@@ -75,3 +75,4 @@ Ein Land mit wenig Bevölkerung hat weniger Medaillen.
  
 Wenn man dann die Bevölkerungs - Medaillendichte betrachtet findet man eine starke Korrelation mit der Medaillendichte.
 Dies spricht für unsere These.
+
