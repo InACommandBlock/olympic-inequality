@@ -8,6 +8,12 @@
 * Use comments!
 * Data is stored compressed; please extract the files directly below `./data/`
 
+While the parsers use built-in modules, we use `matplotlib` and `numpy` for the generation of results. You can enter the virtual environment and run the code:
+```ps
+cd /src
+./Scripts/Activate
+py results.py
+```
 
 ## The Sources
 
