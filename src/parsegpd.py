@@ -3,7 +3,10 @@ from gdp import GDPData
 import os
 
 def parseGDPData():
-    with open("../data/gdp.xml", "r", newline="", encoding="utf-8") as file:
+    current_path = os.path.dirname(os.path.abspath(__file__))
+    parent_path=os.path.dirname(current_path)
+    file_path = os.path.join(parent_path,'data','gdp.xml')
+    with open(file_path, "r", newline="", encoding="utf-8") as file:
         tree = ET.parse(file)
         root = tree.getroot()
 
