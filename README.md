@@ -46,6 +46,32 @@ py results.py
 
 ## The Plan
 
-1. 
+1. Check the data.
 2. Parse the data with Python.
 3. Pretty graphs.
+
+# Fazit
+## Unser These 
+ 
+Das Bruttoinlandsprodukt eines Landes, hat einen Einfluss
+auf den Erfolg bei den olympischen Spielen.
+ 
+## Unsere Daten
+ 
+Zur Überprüfung unserer These, analysieren wir das Bruttoinlandsprodukt eines Landes,
+sowie deren Bevölkerungsanzahl und die Anzahl der gewonnenen Olympia Medaillen.
+ 
+## Ergebnis
+
+![GDP to Medals 2022 Graph](https://github.com/InACommandBlock/olympic-inequality/blob/master/results/gdp_to_medals_2022.png)
+![Population to Medals 2022 Graph](https://github.com/InACommandBlock/olympic-inequality/blob/master/results/population_to_medals_2022.png)
+![Total GDP to Medals 2022](https://github.com/InACommandBlock/olympic-inequality/blob/master/results/total_gdp_to_medals_2022.png) 
+ 
+Das Ergebnis spricht für unsere These, wobei es interessante statistische Ausreißer gibt.
+Diese lassen sich durch die Größe der jeweiligen Bevölkerung erklären.
+Ein Land mit wenig Bevölkerung hat weniger Medaillen.
+ 
+## Aber...
+ 
+Wenn man dann die Bevölkerungs - Medaillendichte betrachtet findet man eine starke Korrelation mit der Medaillendichte.
+Dies spricht für unsere These.
