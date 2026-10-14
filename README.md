@@ -11,12 +11,11 @@
 
 ## The Sources
 
-| Data              | Source        | Format     | Years    | Notes                          |
-| ----------------- | ------------- | ---------- | -------- | ------------------------------ |
-
-| Olympic Medals    | Kaggle.com    |            | 1896 -   | Alice                          |
-| GDP per Capita    | World Bank    |  XML       | 1960 -   | Dennis                         |
-| Population        | OECD          |            | 1961 -   |                                |
+| Data              | Source        | Format     | Years       | Notes                          |
+| ----------------- | ------------- | ---------- | ----------- | ------------------------------ |
+| Olympic Medals    | Kaggle.com    |  CSV       | 1896 - 2022 | Alice                          |
+| GDP per Capita    | World Bank    |  XML       | 1960 - 2025 | Dennis                         |
+| Population        | OECD          |  CSV       | 1961 - 2025 | Dominic                        |
 
 
 [WorldBank.org](https://data.worldbank.org/indicator/NY.GDP.PCAP.CD)
@@ -30,6 +29,4 @@
 
 1. Check the data.
 2. Parse the data with Python.
-3. Make calculations, maths stuffs, +-/*
-4. Pretty graphs.
-
+3. Pretty graphs.
