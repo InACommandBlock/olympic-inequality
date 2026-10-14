@@ -49,3 +49,29 @@ py results.py
 1. 
 2. Parse the data with Python.
 3. Pretty graphs.
+
+
+#Fazit#
+
+## Unser These ##
+
+Das Bruttoinlandsprodukt eines Landes, hat einen Einfluss 
+auf den Erfolg bei den olympischen Spielen.
+
+## Unsere Daten ##
+
+Zur Überprüfung unserer These, analysieren wir das Bruttoinlandsprodukt eines Landes,
+sowie deren Bevölerungsanzahl und die Anzahl der Gewonennen Olympia Medallien
+
+
+## Ergebnis ##
+
+Das Ergebnis spricht für unsere These, wobei es Interessante statistische Aussreisser gibt.
+Die sich durch die größe der jeweiligen Bevölkerung erklären lassen.
+Ein Land mit wenig Bevölkerung hat weniger Medallien. 
+
+## Aber ##
+
+Wenn man dann die Bevölerungs-Medalliendichte betrachtet,
+findet man eine starke Korrelation mit der Bruttoinlandsprodukt. 
+was für unsere These spricht.
