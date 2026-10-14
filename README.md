@@ -13,8 +13,9 @@
 
 | Data              | Source        | Format     | Years    | Notes                          |
 | ----------------- | ------------- | ---------- | -------- | ------------------------------ |
-| Olympic Medals    | Kaggle.com    |            | 1896 -   |                                |
-| GDP per Capita    | World Bank    |  XML       | 1960 -   |   Dennis                       |
+
+| Olympic Medals    | Kaggle.com    |            | 1896 -   | Alice                          |
+| GDP per Capita    | World Bank    |  XML       | 1960 -   | Dennis                         |
 | Population        | OECD          |            | 1961 -   |                                |
 
 
