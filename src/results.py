@@ -6,7 +6,6 @@ from population import PopulationData
 from medals import MedalData
 
 import math
-
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -30,7 +29,7 @@ def scatter(title: str, points: list[tuple[int, int]], x_axis: str, y_axis: str,
     plt.show()
 
 def wealth_to_medals(medal_data: MedalData, relgdp_data: GdpData, year=2022):
-    print(f"\n\nGDP/p (per person) to Medals for {year}")
+    print(f"\n\nGDP/p to Medals for {year}")
     points = []
     for country in relgdp_data.by_year[year]:
         gdp = relgdp_data.by_year[year][country]
@@ -41,7 +40,7 @@ def wealth_to_medals(medal_data: MedalData, relgdp_data: GdpData, year=2022):
         num_medals = len(medals_in_year)
         print(f"{country} : GDP/p = {gdp}$ ; ∑medals = {num_medals}")
         points.append((gdp, num_medals))
-    scatter(f"GDP/p (per person) to Medals {year}", points, x_axis="GDP/p", y_axis="# Medals", filename=f"../results/gdp_to_medals_{year}.png", do_avg=True)
+    scatter(f"GDP/p to Medals {year}", points, x_axis="GDP/p", y_axis="# Medals", filename=f"../results/gdppc_to_medals_{year}.png", do_avg=True)
 
 def population_to_medals(medal_data: MedalData, population_data: PopulationData, year=2022):
     print(f"\n\nPopulation to Medals for {year}")
@@ -58,7 +57,7 @@ def population_to_medals(medal_data: MedalData, population_data: PopulationData,
     scatter(f"Population to Medals {year}", points, x_axis="Population", y_axis="# Medals", filename=f"../results/population_to_medals_{year}.png", do_avg=True)
 
 def total_gdp_to_medals(medal_data: MedalData, relgdp_data: GdpData, population_data: PopulationData, year=2022):
-    print(f"\n\nTotal GDP to Medals for {year}")
+    print(f"\n\nGDP to Medals for {year}")
     points = []
     for country, gdp_per_capita in relgdp_data.by_year[year].items():
         population = population_data.by_year[year].get(country, None)
@@ -75,13 +74,22 @@ def total_gdp_to_medals(medal_data: MedalData, relgdp_data: GdpData, population_
         num_medals = len(medals_in_year)
         print(f"{country} : GDP = {total_gdp:.0f}$ ({gdp_db:.1f} dB$) ; ∑medals = {num_medals}")
         points.append((gdp_db, num_medals))
-    scatter(f"Total GDP to Medals {year}", points, x_axis="GDP (dB$)", y_axis="# Medals", filename=f"../results/total_gdp_to_medals_{year}.png", do_avg=True)
+    scatter(f"GDP to Medals {year}", points, x_axis="GDP (dB$)", y_axis="# Medals", filename=f"../results/gdp_to_medals_{year}.png", do_avg=True)
 
 if __name__ == '__main__':
+    year = 2022
+    import sys
+    if len(sys.argv) > 1:
+        wants = int(sys.argv[1])
+        if wants % 4 == 2 and 1961 < wants < 2023:
+            year = wants
+        else:
+            raise ValueError("You have entered an invalid year.")
+
     relgdp = read_gdp()
     population = read_population()
     medals = read_medals()
 
-    wealth_to_medals(medals, relgdp)
-    population_to_medals(medals, population)
-    total_gdp_to_medals(medals, relgdp, population)
+    wealth_to_medals(medals, relgdp, year=year)
+    population_to_medals(medals, population, year=year)
+    total_gdp_to_medals(medals, relgdp, population, year=year)
