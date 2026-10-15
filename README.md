@@ -5,6 +5,7 @@
 
 If the CSV/XML files are still zip-compressed, please extract them directly below `data/`.
 While the parsers use built-in modules, we use `matplotlib` and `numpy` for the generation of results. You can enter the virtual environment and run the code:
+
 **On Windows**
 ```ps
 cd src/
@@ -18,7 +19,9 @@ source ./bin/activate
 py results.py
 ```
 Alternatively, you can install them globally with `pip install matplotlib numpy`. Please make sure you're running the code from inside the `src/` directory.
-The program will show results for 2022 by default. You can add any olympic year starting 1962 as a parameter when executing.
+
+The program will show results for 2022 by default. You can add any olympic year 1962 - 2022 as a parameter when executing.
+
 The console output will show the individual data points in addition to the graphic representation. Close the window to move on to the next statistic. All graphs will also be output as a PNG to `results/`.
 
 
@@ -54,10 +57,13 @@ The console output will show the individual data points in addition to the graph
 **Ergebnisse 3:** Nach der Auswertung der geplanten zwei Graphen entschieden wir uns einen dritten zu erstellen, in dem wir die Problematiken der anderen zu umgehen versuchten. Diese waren:
 1. Die exponentielle Verteilung der Werte, zB. dass die meisten Länder zwischen 1-100 Millionen Einwohnern liegen, China und Indien jedoch mit 1,4 Milliarden Einwohnern die Skala verzerren. Dasselbe gilt auch für BIP-pro-Person, wo Werte von 301$ (Burundi) bis 188055$ (Lichtenstein) gehen.
 2. Dass Bevölkerung und Wohlstand separat ausgewertet werden, obwohl sie häufig invers proportional sind. Dadurch stehen beim Wohlstand viele Länder vorne, die aber sehr wenige Einwohner haben, und ebenso stehen bei Bevölkerung viele Länder vorne, die aber sehr wenig Wohlstand haben.
+
 Bei Dezibel-BIP (Graph 3) nutzen wir das BIP (berechnet durch `BIP/Person * Einwohnerzahl`) als kombinierten Wohlstands- und Bevölkerungsindex, und wenden zudem eine Dezibel-Skala (`y = log~10(x)`, also `x*10 -> y+1`) an, um die Werte besser zu verteilen. Im darausfolgenden Graph sieht man eine klare Tendenz; ein höheres BIP führt auch zu mehr olympischen Medaillen.
 
 **Fazit:** Der Wohlstand eines Landes trägt deutlich zu dessen Erfolg bei den olympischen Spielen teil, noch wesentlich mehr als Einwohnerzahl. Ein Großteil der Medaillen geht meist an Länder mit mittlerem oder hohem BIP. Man sollte die Ergebnisse mit größeren Datenmengen und konkreteren Faktoren erweitern und überprüfen.
+
 Auch wenn dieser Trend statistisch signifikant ist, ist er noch längst keine Garantie. Es gibt viele weitere Faktoren, die hier eine Rolle spielen könnten, zum Beispiel staatliche Investitionen in Sportangebote, Universitäten und Sporthochschulen, die Vermögensverteilung, uvm. Auch die bestimmten Sportarten machen vermutlich einen Unterschied, denn Sporte wie Tennis und Reiten sind oft weniger zugänglich zu niedrigen Einkommensschichten. Besonders interessant wäre eine Analyse inwiefern Siege in vorangegangenen Jahren auch zu weiteren Siegen führen, ob durch stärkere Förderungen, mehr Begeisterung, oder psychologische Einflüsse.
+
 Weitere Forschung ist benötigt, um die gefundenen Ergebnisse zu verifizieren.
 
 ![Population to Medals 2022](https://github.com/InACommandBlock/olympic-inequality/blob/master/results/population_to_medals_2022.png)
